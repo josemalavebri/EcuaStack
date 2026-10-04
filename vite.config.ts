@@ -8,9 +8,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        imprenta: resolve(
+        helpGraf: resolve(
           __dirname,
-          'src/projects/landing-imprenta/index.html'
+          'src/projects/help-graf/src/index.html'
         ),
       },
     },
