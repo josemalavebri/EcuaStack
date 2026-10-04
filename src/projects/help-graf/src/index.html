@@ -12,8 +12,8 @@
     />
 
     <link
-      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
     />
 
     <link rel="stylesheet" href="css/main.css" />
@@ -23,61 +23,63 @@
     <!-- ==========================================
       Topbar
     ========================================== -->
+
     <div class="topbar overflow-hidden" id="topbar">
       <div class="topbar__track d-flex align-items-center gap-4">
         <a
-          href="https://www.google.com/maps/place/Imprenta+helpgraf/@-2.1940818,-79.89744,17z/data=!4m6!3m5!1s0x902d6f295c52e0b:0x547067046e4d0cc9!8m2!3d-2.1940817!4d-79.8943445!16s%2Fg%2F11j86tzzw6"
+          href="https://www.google.com/maps/place/Imprenta+helpgraf/@-2.1940818,-79.89744,17z"
           class="topbar__item d-flex align-items-center gap-2 text-decoration-none"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="bi bi-geo-alt-fill"></i>
+          <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
           <span>C. 8 S-O 1629, 090311 Guayaquil</span>
         </a>
 
-        <span class="topbar__separator">•</span>
+        <span class="topbar__separator" aria-hidden="true">•</span>
 
         <span class="topbar__item d-flex align-items-center gap-2">
-          <i class="bi bi-clock-fill"></i>
+          <i class="bi bi-clock-fill" aria-hidden="true"></i>
           <span>Abierto · Cierra a las 5 p. m.</span>
         </span>
 
-        <span class="topbar__separator">•</span>
+        <span class="topbar__separator" aria-hidden="true">•</span>
 
         <a
           href="tel:+593981717644"
           class="topbar__item d-flex align-items-center gap-2 text-decoration-none"
         >
-          <i class="bi bi-telephone-fill"></i>
+          <i class="bi bi-telephone-fill" aria-hidden="true"></i>
           <span>098 171 7644</span>
         </a>
 
-        <!-- Segunda copia -->
-        <span class="topbar__separator">•</span>
+        <!-- Segunda copia para el desplazamiento del topbar -->
+
+        <span class="topbar__separator" aria-hidden="true">•</span>
 
         <a
-          href="https://www.google.com/maps/place/Imprenta+helpgraf/@-2.1940818,-79.89744,17z/data=!4m6!3m5!1s0x902d6f295c52e0b:0x547067046e4d0cc9!8m2!3d-2.1940817!4d-79.8943445!16s%2Fg%2F11j86tzzw6"
+          href="https://www.google.com/maps/place/Imprenta+helpgraf/@-2.1940818,-79.89744,17z"
           class="topbar__item d-flex align-items-center gap-2 text-decoration-none"
           target="_blank"
           rel="noopener noreferrer"
           aria-hidden="true"
           tabindex="-1"
         >
-          <i class="bi bi-geo-alt-fill"></i>
+          <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
           <span>C. 8 S-O 1629, 090311 Guayaquil</span>
         </a>
 
-        <span class="topbar__separator">•</span>
+        <span class="topbar__separator" aria-hidden="true">•</span>
 
         <span
           class="topbar__item d-flex align-items-center gap-2"
           aria-hidden="true"
         >
-          <i class="bi bi-clock-fill"></i>
+          <i class="bi bi-clock-fill" aria-hidden="true"></i>
           <span>Abierto · Cierra a las 5 p. m.</span>
         </span>
 
-        <span class="topbar__separator">•</span>
+        <span class="topbar__separator" aria-hidden="true">•</span>
 
         <a
           href="tel:+593981717644"
@@ -85,11 +87,15 @@
           aria-hidden="true"
           tabindex="-1"
         >
-          <i class="bi bi-telephone-fill"></i>
+          <i class="bi bi-telephone-fill" aria-hidden="true"></i>
           <span>098 171 7644</span>
         </a>
       </div>
     </div>
+
+    <!-- ==========================================
+      Navbar
+    ========================================== -->
 
     <header class="navbar" id="mainNavbar">
       <div class="container position-relative text-center">
@@ -146,7 +152,12 @@
         </div>
       </div>
     </header>
+
     <main>
+      <!-- ==========================================
+        Hero
+      ========================================== -->
+
       <section
         class="hero-section position-relative d-flex align-items-center"
         id="inicio"
@@ -170,6 +181,10 @@
         </div>
       </section>
 
+      <!-- ==========================================
+        Servicios
+      ========================================== -->
+
       <section class="services-section" id="servicios">
         <div
           class="services-texture"
@@ -179,7 +194,7 @@
 
         <div class="container position-relative">
           <header class="section-header text-center">
-            <span class="section-eyebrow">Lo que hacemos</span>
+            <span class="section-eyebrow"> Lo que hacemos </span>
 
             <h2 class="section-title">Damos vida a tus ideas</h2>
 
@@ -192,108 +207,144 @@
             class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"
             id="gridServicesQuickAccess"
           >
+            <!-- Tarjetas -->
+
             <div class="col">
               <a href="#tarjetas" class="service-card">
                 <div class="service-image">
                   <img
-                    src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=900&q=80"
+                    src="assets/img/personalidad.avif"
                     alt="Tarjetas de presentación impresas"
+                    loading="lazy"
                   />
-                  <span class="service-number">01</span>
+
+                  <span class="service-number"> 01 </span>
                 </div>
 
                 <div class="service-content">
                   <div class="service-icon">
-                    <i class="bi bi-person-vcard"></i>
+                    <i class="bi bi-person-vcard" aria-hidden="true"></i>
                   </div>
 
                   <div>
                     <h3>Tarjetas</h3>
+
                     <p>Presenta tu marca con personalidad.</p>
                   </div>
 
-                  <i class="bi bi-arrow-up-right service-arrow"></i>
+                  <i
+                    class="bi bi-arrow-up-right service-arrow"
+                    aria-hidden="true"
+                  ></i>
                 </div>
               </a>
             </div>
+
+            <!-- Folletos -->
 
             <div class="col">
               <a href="#servicios" class="service-card">
                 <div class="service-image">
                   <img
-                    src="https://lirp.cdn-website.com/1fa27b71/dms3rep/multi/opt/v2-ilpra-awv4f-640w.jpg"
+                    src="assets/img/impresos.webp"
                     alt="Folletos impresos a color"
+                    loading="lazy"
                   />
-                  <span class="service-number">02</span>
+
+                  <span class="service-number"> 02 </span>
                 </div>
 
                 <div class="service-content">
                   <div class="service-icon">
-                    <i class="bi bi-book"></i>
+                    <i class="bi bi-book" aria-hidden="true"></i>
                   </div>
 
                   <div>
                     <h3>Folletos</h3>
+
                     <p>Comunica tus ideas en cada página.</p>
                   </div>
 
-                  <i class="bi bi-arrow-up-right service-arrow"></i>
+                  <i
+                    class="bi bi-arrow-up-right service-arrow"
+                    aria-hidden="true"
+                  ></i>
                 </div>
               </a>
             </div>
+
+            <!-- Calendarios -->
 
             <div class="col">
               <a href="#servicios" class="service-card">
                 <div class="service-image">
                   <img
-                    src="https://public-files.gumroad.com/jd5kz7bd6skfl7um81a64yzm6crn"
-                    alt="Calendario impreso a color"
+                    src="assets/img/calendarios.png"
+                    alt="Calendarios impresos a color"
+                    loading="lazy"
                   />
-                  <span class="service-number">03</span>
+
+                  <span class="service-number"> 03 </span>
                 </div>
 
                 <div class="service-content">
                   <div class="service-icon">
-                    <i class="bi bi-calendar3"></i>
+                    <i class="bi bi-calendar3" aria-hidden="true"></i>
                   </div>
 
                   <div>
                     <h3>Calendarios</h3>
+
                     <p>Tu marca presente durante todo el año.</p>
                   </div>
 
-                  <i class="bi bi-arrow-up-right service-arrow"></i>
+                  <i
+                    class="bi bi-arrow-up-right service-arrow"
+                    aria-hidden="true"
+                  ></i>
                 </div>
               </a>
             </div>
+
+            <!-- Gigantografías -->
 
             <div class="col">
               <a href="#servicios" class="service-card">
                 <div class="service-image">
                   <img
-                    src="https://phobianprintworx.co.za/assets/banners-Dck3xphY.jpg"
-                    alt="Impresión de gigantografía"
+                    src="assets/img/impresos.webp"
+                    alt="Impresión de gigantografías"
+                    loading="lazy"
                   />
-                  <span class="service-number">04</span>
+
+                  <span class="service-number"> 04 </span>
                 </div>
 
                 <div class="service-content">
                   <div class="service-icon">
-                    <i class="bi bi-image"></i>
+                    <i class="bi bi-image" aria-hidden="true"></i>
                   </div>
 
                   <div>
                     <h3>Gigantografías</h3>
+
                     <p>Haz que tu mensaje sea imposible de ignorar.</p>
                   </div>
 
-                  <i class="bi bi-arrow-up-right service-arrow"></i>
+                  <i
+                    class="bi bi-arrow-up-right service-arrow"
+                    aria-hidden="true"
+                  ></i>
                 </div>
               </a>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- ==========================================
+        Nosotros
+      ========================================== -->
 
       <section class="about-section" id="nosotros">
         <div class="container">
@@ -304,7 +355,7 @@
           <div class="row align-items-center justify-content-center g-4">
             <div class="col-md-3 text-center text-md-end">
               <div class="pen-icon-wrapper">
-                <i class="bi bi-pen-fill"></i>
+                <i class="bi bi-pen-fill" aria-hidden="true"></i>
               </div>
             </div>
 
@@ -329,7 +380,12 @@
       </section>
     </main>
 
+    <!-- ==========================================
+      Scripts
+    ========================================== -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="js/hero.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animation.js"></script>
