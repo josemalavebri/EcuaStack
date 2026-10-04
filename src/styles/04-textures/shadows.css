@@ -1,0 +1,17 @@
+/*
+ * Utilidades visuales relacionadas con sombras.
+ *
+ * Los valores principales viven en variables.css.
+ */
+
+.shadow-project-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-project-md {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-project-lg {
+  box-shadow: var(--shadow-lg);
+}

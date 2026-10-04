@@ -1,0 +1,54 @@
+/* css/components/buttons.css */
+
+.btn {
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: var(--transition-fast);
+}
+
+.btn-primary {
+  background-color: var(--color-dark) !important;
+  border-color: var(--color-dark) !important;
+  color: var(--color-white) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--cmyk-magenta) !important;
+  border-color: var(--cmyk-magenta) !important;
+  color: var(--color-white) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(236, 0, 140, 0.3) !important;
+}
+
+.btn-outline-dark {
+  border: 2px solid var(--color-dark) !important;
+  color: var(--color-dark) !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:focus {
+  background-color: var(--color-dark) !important;
+  color: var(--color-primary-yellow) !important;
+  transform: translateY(-2px);
+}
+
+.btn-warning {
+  background-color: var(--color-primary-yellow) !important;
+  border-color: var(--color-primary-yellow) !important;
+  color: var(--color-dark) !important;
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+  background-color: var(--color-dark) !important;
+  border-color: var(--color-dark) !important;
+  color: var(--color-primary-yellow) !important;
+  transform: translateY(-2px);
+}

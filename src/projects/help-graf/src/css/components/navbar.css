@@ -1,0 +1,76 @@
+/* css/components/navbar.css */
+
+.navbar {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 3px solid var(--color-primary-yellow);
+  transition: var(--transition-fast);
+}
+
+.navbar-brand {
+  margin: 0;
+}
+
+.logo-img {
+  max-height: 52px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 2rem;
+}
+
+.cmyk-icons i {
+  font-size: 1.25rem;
+  color: var(--color-dark);
+}
+
+.cmyk-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.bg-magenta {
+  background-color: var(--cmyk-magenta);
+}
+
+.bg-cyan {
+  background-color: var(--cmyk-cyan);
+}
+
+.navbar .nav {
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-gray-border);
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem !important;
+  color: var(--color-dark) !important;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--cmyk-cyan);
+  transform: translateX(-50%);
+  transition: var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--cmyk-cyan) !important;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 70%;
+}

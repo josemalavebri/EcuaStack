@@ -1,0 +1,49 @@
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+  margin-top: 0;
+
+  color: var(--color-text);
+
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+
+  letter-spacing: -0.025em;
+}
+
+p {
+  color: var(--color-text-secondary);
+}
+
+.text-accent {
+  color: var(--color-text-accent) !important;
+}
+
+.eyebrow-text {
+  display: inline-block;
+
+  color: var(--color-brand);
+
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}

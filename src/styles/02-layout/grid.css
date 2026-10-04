@@ -1,0 +1,15 @@
+/*
+ * Layout específico del proyecto.
+ *
+ * Bootstrap continúa siendo responsable de:
+ * .container
+ * .container-fluid
+ * .row
+ * .col-*
+ * flexbox
+ * spacing
+ * responsive utilities
+ *
+ * Este archivo solo contiene reglas de layout propias
+ * cuando Bootstrap no cubra una necesidad específica.
+ */

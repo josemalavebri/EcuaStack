@@ -1,0 +1,265 @@
+/* ==========================================================
+   NAVBAR
+   ========================================================== */
+
+.navbar {
+  min-height: 68px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+
+  background-color: rgb(255 255 255 / 0.96) !important;
+  border-bottom: 1px solid var(--color-border);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  z-index: 1030;
+}
+
+/* ==========================================================
+   BRAND
+   ========================================================== */
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+
+  min-height: 38px;
+  padding: 0.45rem 0.75rem;
+
+  background-color: var(--color-brand);
+  color: var(--color-text-inverse) !important;
+
+  border-radius: var(--radius-sm);
+
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+
+  letter-spacing: -0.02em;
+  text-decoration: none;
+
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.navbar-brand i {
+  font-size: 1rem;
+}
+
+.navbar-brand-accent {
+  color: #ffffff;
+}
+
+.navbar-brand:hover {
+  background-color: var(--color-brand-dark);
+  color: #ffffff !important;
+
+  transform: translateY(-1px);
+}
+
+.navbar-brand:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 3px;
+}
+
+/* ==========================================================
+   NAVIGATION LINKS
+   ========================================================== */
+
+.navbar .nav-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 40px;
+  padding: 0.5rem 0.75rem !important;
+
+  color: var(--color-text-secondary) !important;
+
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+/* Hover */
+
+.navbar .nav-link:hover {
+  color: var(--color-brand) !important;
+}
+
+/* Active */
+
+.navbar .nav-link.active {
+  color: var(--color-brand) !important;
+}
+
+/* Indicador inferior */
+
+.navbar .nav-link::after {
+  content: "";
+
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.15rem;
+  left: 0.75rem;
+
+  height: 2px;
+
+  background-color: var(--color-brand);
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform var(--transition-fast);
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* ==========================================================
+   FOCUS
+   ========================================================== */
+
+.navbar .nav-link:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+
+  border-radius: var(--radius-sm);
+}
+
+/* ==========================================================
+   MOBILE TOGGLER
+   ========================================================== */
+
+.navbar-toggler {
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: 1px solid var(--color-border-strong) !important;
+  border-radius: var(--radius-sm);
+
+  background-color: var(--color-bg);
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.navbar-toggler:hover {
+  background-color: var(--color-brand-light);
+  border-color: var(--color-brand) !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgb(0 103 184 / 0.15);
+}
+
+/* ==========================================================
+   COLLAPSED MENU
+   ========================================================== */
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding-top: 0.75rem;
+  }
+
+  .navbar-nav {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .navbar .nav-link {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.65rem 0.75rem !important;
+  }
+
+  .navbar .nav-link::after {
+    right: 0.75rem;
+    bottom: 0.2rem;
+    left: 0.75rem;
+  }
+
+  .navbar .nav-item {
+    width: 100%;
+  }
+
+  .navbar-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================
+   CTA
+   ========================================================== */
+
+.navbar-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+
+  min-height: 40px;
+  padding: 0.5rem 1rem !important;
+
+  border-radius: var(--radius-sm) !important;
+
+  font-size: 0.8rem !important;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  box-shadow: none;
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.navbar-cta:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 12px rgb(0 103 184 / 0.18);
+}
+
+.navbar-cta:active {
+  transform: translateY(0);
+}
+
+.navbar-cta:focus-visible {
+  box-shadow:
+    0 0 0 3px rgb(0 103 184 / 0.15),
+    0 4px 12px rgb(0 103 184 / 0.12);
+}
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar *,
+  .navbar *::after {
+    transition: none !important;
+  }
+}

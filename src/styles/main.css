@@ -1,0 +1,25 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/space-grotesk/700.css";
+
+@import "./00-abstracts/variables.css";
+
+@import "./01-base/reset.css";
+@import "./01-base/typography.css";
+
+@import "./02-layout/header.css";
+@import "./02-layout/grid.css";
+@import "./02-layout/footer.css";
+@import "./02-layout/nav.css";
+
+@import "./03-modules/cards.css";
+@import "./03-modules/buttons.css";
+
+@import "./04-textures/shadows.css";
+@import "./04-textures/gradients.css";
+
+@import "./05-state/states.css";
+
+@import "./06-utilities/utilities.css";
+
+@import "./07-theme/dark-theme.css";

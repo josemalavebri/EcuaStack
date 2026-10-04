@@ -1,0 +1,27 @@
+.card:hover {
+  border-color: var(--color-border-strong);
+
+  box-shadow: var(--shadow-md);
+
+  transform: translateY(-2px);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card:focus-within {
+  border-color: var(--color-brand);
+
+  box-shadow:
+    0 0 0 3px rgb(0 103 184 / 0.12),
+    var(--shadow-sm);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,62 @@
+/* ==========================================
+   HELPGRAF
+   Sistema de variables
+   ========================================== */
+
+:root {
+  /* ==========================================
+     COLORES
+     ========================================== */
+
+  --color-primary-yellow: #ffde00;
+  --color-primary-yellow-hover: #e5c700;
+
+  --color-dark: #121212;
+  --color-dark-subtle: #212529;
+
+  --color-white: #ffffff;
+  --color-light-bg: #f8f9fa;
+
+  --color-gray-border: #e0e0e0;
+  --color-text-muted: #6c757d;
+
+  /* ==========================================
+     ACENTOS CMYK
+     ========================================== */
+
+  --cmyk-cyan: #00aeef;
+  --cmyk-magenta: #ec008c;
+  --cmyk-yellow: #fff200;
+
+  /* ==========================================
+     TIPOGRAFÍA
+     ========================================== */
+
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  --font-heading: "Montserrat", system-ui, -apple-system, sans-serif;
+
+  /* ==========================================
+     SOMBRAS
+     ========================================== */
+
+  --shadow-navbar: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+  --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+  /* ==========================================
+     TRANSICIONES
+     ========================================== */
+
+  --transition-fast: all 0.25s ease-in-out;
+
+  /* ==========================================
+     BOOTSTRAP
+     ========================================== */
+
+  --bs-primary: var(--color-dark);
+  --bs-primary-rgb: 18, 18, 18;
+
+  --bs-warning: var(--color-primary-yellow);
+  --bs-warning-rgb: 255, 222, 0;
+}

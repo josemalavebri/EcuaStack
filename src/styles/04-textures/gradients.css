@@ -1,0 +1,15 @@
+.gradient-brand {
+  background: linear-gradient(
+    90deg,
+    var(--color-brand) 0%,
+    transparent 100%
+  );
+}
+
+.gradient-brand-soft {
+  background: linear-gradient(
+    135deg,
+    var(--color-brand-light) 0%,
+    var(--color-bg) 100%
+  );
+}
