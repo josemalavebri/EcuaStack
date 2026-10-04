@@ -4,8 +4,13 @@ import Modal from 'bootstrap/js/dist/modal';
 
 import './styles/main.css';
 
+import heroImage from './assets/img/hero-comprimida.jpg';
+
 import { PROJECTS } from './data/projects';
 import type { CommercialProject } from './data/projects';
+
+const heroImageElement =
+  document.getElementById('hero-image') as HTMLImageElement | null;
 
 const projectsGrid =
   document.getElementById('projects-grid') as HTMLDivElement | null;
@@ -34,15 +39,7 @@ const modalExternalLink =
 function renderProjects(
   projects: CommercialProject[]
 ): void {
-  console.log('🎨 renderProjects() ejecutado');
-  console.log('📦 Proyectos recibidos:', projects);
-  console.log('📊 Cantidad recibida:', projects.length);
-
   if (!projectsGrid) {
-    console.error(
-      '❌ No se encontró #projects-grid en el DOM.'
-    );
-
     return;
   }
 
@@ -65,12 +62,7 @@ function renderProjects(
     return;
   }
 
-  projects.forEach((project, index) => {
-    console.log(
-      `🧩 Renderizando proyecto ${index + 1}:`,
-      project
-    );
-
+  projects.forEach((project) => {
     const card =
       document.createElement('div');
 
@@ -167,10 +159,6 @@ function renderProjects(
   });
 
   setupPreviewButtons();
-
-  console.log(
-    '✅ Proyectos renderizados correctamente'
-  );
 }
 
 function setupPreviewButtons(): void {
@@ -183,21 +171,12 @@ function setupPreviewButtons(): void {
       '.preview-project'
     );
 
-  console.log(
-    '👁️ Botones de vista previa encontrados:',
-    previewButtons.length
-  );
-
   previewButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const projectId =
         button.dataset.projectId;
 
       if (!projectId) {
-        console.warn(
-          '⚠️ El botón de vista previa no tiene data-project-id.'
-        );
-
         return;
       }
 
@@ -207,11 +186,6 @@ function setupPreviewButtons(): void {
         );
 
       if (!project) {
-        console.error(
-          '❌ No se encontró el proyecto:',
-          projectId
-        );
-
         return;
       }
 
@@ -223,16 +197,7 @@ function setupPreviewButtons(): void {
 function openProjectPreview(
   project: CommercialProject
 ): void {
-  console.log(
-    '👁️ Abriendo vista previa:',
-    project
-  );
-
   if (!modalElement) {
-    console.error(
-      '❌ No existe #previewModal en el HTML.'
-    );
-
     return;
   }
 
@@ -278,15 +243,7 @@ function setupModalCleanup(): void {
 }
 
 function setupContactForm(): void {
-  console.log(
-    '📨 setupContactForm() ejecutado'
-  );
-
   if (!contactForm) {
-    console.warn(
-      '⚠️ No se encontró #contact-form en el DOM.'
-    );
-
     return;
   }
 
@@ -301,10 +258,6 @@ function setupContactForm(): void {
         );
 
       if (!submitButton) {
-        console.warn(
-          '⚠️ No se encontró el botón de envío.'
-        );
-
         return;
       }
 
@@ -358,12 +311,7 @@ function setupContactForm(): void {
 
         contactForm.reset();
 
-      } catch (error) {
-        console.error(
-          '❌ Error al enviar el formulario:',
-          error
-        );
-
+      } catch {
         showFormAlert(
           'danger',
           'No se pudo enviar el mensaje. Inténtalo nuevamente.'
@@ -411,49 +359,13 @@ function showFormAlert(
 }
 
 function initializeApp(): void {
-  console.log(
-    '🚀 Inicializando EcuaStack...'
-  );
-
-  console.log(
-    '📦 PROJECTS importados:',
-    PROJECTS
-  );
-
-  console.log(
-    '📊 Cantidad de proyectos:',
-    PROJECTS.length
-  );
-
-  console.log(
-    '🔎 #projects-grid:',
-    projectsGrid
-  );
-
-  console.log(
-    '🔎 #project-count:',
-    projectCount
-  );
-
-  console.log(
-    '🔎 #contact-form:',
-    contactForm
-  );
-
-  console.log(
-    '🔎 #previewModal:',
-    modalElement
-  );
+  if (heroImageElement) {
+    heroImageElement.src = heroImage;
+  }
 
   renderProjects(PROJECTS);
-
   setupContactForm();
-
   setupModalCleanup();
-
-  console.log(
-    '🏁 Aplicación inicializada'
-  );
 }
 
 if (
