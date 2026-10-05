@@ -1,4 +1,4 @@
-header {
+.hero {
   position: relative;
 
   background-color: var(--color-bg) !important;
@@ -7,31 +7,177 @@ header {
   overflow: hidden;
 }
 
-header::after {
+/* ================================
+   Label superior
+   ================================ */
+
+.hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  color: var(--color-brand);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-label-line {
+  display: block;
+
+  width: 32px;
+  height: 2px;
+
+  background-color: var(--color-brand);
+}
+
+.hero-label-text {
+  white-space: nowrap;
+}
+
+.hero-label-separator {
+  margin: 0 0.35rem;
+
+  color: var(--color-border);
+}
+
+.hero-label-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  color: var(--color-brand);
+
+  background-color: var(--color-brand-light);
+
+  border: 1px solid rgb(0 103 184 / 0.12);
+  border-radius: 50%;
+
+  font-size: 0.7rem;
+}
+
+/* ================================
+   Preview
+   ================================ */
+
+.hero-preview {
+  isolation: isolate;
+}
+
+.hero-preview-frame {
+  position: relative;
+  z-index: 2;
+
+  overflow: hidden;
+
+  background-color: #fff;
+
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+
+  box-shadow:
+    0 1rem 3rem rgb(0 0 0 / 0.08),
+    0 0.25rem 0.75rem rgb(0 0 0 / 0.04);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-preview-frame:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 1.25rem 3.5rem rgb(0 0 0 / 0.1),
+    0 0.35rem 1rem rgb(0 0 0 / 0.05);
+}
+
+/* Barra superior tipo navegador */
+
+.hero-preview-bar {
+  display: flex;
+  align-items: center;
+
+  gap: 0.35rem;
+
+  height: 32px;
+
+  padding: 0 0.75rem;
+
+  background-color: #f8f9fa;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-preview-bar span {
+  width: 7px;
+  height: 7px;
+
+  background-color: #d6d9dc;
+
+  border-radius: 50%;
+}
+
+.hero-preview-frame img {
+  display: block;
+
+  width: 100%;
+  max-height: 410px;
+
+  object-fit: cover;
+}
+
+/* ================================
+   Glow
+   ================================ */
+
+.hero-preview-glow {
+  position: absolute;
+  z-index: 1;
+
+  width: 65%;
+  height: 65%;
+
+  top: 18%;
+  left: 18%;
+
+  background: rgb(0 103 184 / 0.11);
+
+  filter: blur(75px);
+
+  pointer-events: none;
+}
+
+/* ================================
+   Decoración del hero
+   ================================ */
+
+.hero::after {
   content: "";
 
   position: absolute;
   top: 0;
   right: 0;
 
-  width: 240px;
+  width: 320px;
   height: 100%;
 
   pointer-events: none;
 
-  opacity: 0.45;
+  opacity: 0.55;
 
   background-image: linear-gradient(
     135deg,
-    rgb(0 103 184 / 0.04) 1px,
+    rgb(0 103 184 / 0.045) 1px,
     transparent 1px
   );
 
-  background-size: 14px 14px;
+  background-size: 16px 16px;
 
-  mask-image: linear-gradient(
-    135deg,
-    black,
-    transparent 80%
-  );
+  mask-image: linear-gradient(135deg, black, transparent 75%);
 }

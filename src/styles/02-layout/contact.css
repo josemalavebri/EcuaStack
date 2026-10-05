@@ -1,0 +1,129 @@
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-section {
+  background-color: var(--color-bg-soft);
+}
+
+.contact-header {
+  max-width: 700px;
+}
+
+.contact-eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.contact-title {
+  margin-bottom: 0.75rem;
+}
+
+.contact-description {
+  max-width: 600px;
+  margin-inline: auto;
+  color: var(--color-text-secondary);
+}
+
+/* =========================================================
+   CONTACT CARD
+   ========================================================= */
+
+.contact-card {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* =========================================================
+   CONTACT CARD HEADER
+   ========================================================= */
+
+.contact-card-header {
+  padding: 1.5rem 1.75rem;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contact-card-title {
+  margin-bottom: 0.35rem;
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.contact-card-description {
+  margin-bottom: 0;
+  color: var(--color-text-tertiary);
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.contact-form {
+  padding: 1.75rem;
+  background-color: var(--color-bg);
+}
+
+.contact-label {
+  margin-bottom: 0.4rem;
+  color: var(--color-text-secondary);
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+  min-height: 46px;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border-color: var(--color-border-strong);
+  border-radius: var(--radius-md);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.contact-form textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form .form-control::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.contact-form .form-control:hover,
+.contact-form .form-select:hover {
+  border-color: var(--color-brand);
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px rgb(0 103 184 / 0.12);
+}
+
+/* =========================================================
+   SUBMIT
+   ========================================================= */
+
+.contact-submit {
+  min-height: 48px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+  .contact-card-header,
+  .contact-form {
+    padding: 1.25rem;
+  }
+}
