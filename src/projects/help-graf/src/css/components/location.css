@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Sección de Ubicación / Mapa - HELPGRAF Variables
+   ========================================================================== */
+
+.location-section {
+  background-color: var(--color-dark-subtle);
+  color: var(--color-white);
+  font-family: var(--font-body);
+}
+
+/* Tarjeta contenedora de datos */
+.location-card {
+  background-color: var(--color-dark);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.location-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.location-description {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.location-details span {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.location-link {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+}
+
+.location-link:hover {
+  color: var(--color-primary-yellow);
+}
+
+/* Badge de categoría */
+.badge.bg-yellow {
+  background-color: var(--color-primary-yellow) !important;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+/* Botón externo para abrir la app de Maps */
+.btn-maps-external {
+  background-color: transparent;
+  color: var(--color-primary-yellow);
+  border: 1px solid var(--color-primary-yellow);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 10px 16px;
+  transition: var(--transition-fast);
+}
+
+.btn-maps-external:hover {
+  background-color: var(--color-primary-yellow);
+  color: var(--color-dark);
+}
+
+/* Contenedor e iframe del Mapa */
+.map-wrapper {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 420px;
+}
+
+.map-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* Filtro sutil para integrar el mapa con el tema oscuro sin perder detalle */
+  filter: grayscale(20%) contrast(105%);
+}
