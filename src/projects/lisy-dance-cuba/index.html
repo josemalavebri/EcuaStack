@@ -3,690 +3,584 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="icon" type="image/jpeg" href="/img/silueta-bailarina.jpg" />
+
     <title>LisyDanceCuba - Academia de Ballet</title>
 
-    <!-- Bootstrap 5.3 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Estilos Personalizados -->
     <link rel="stylesheet" href="src/style.css" />
   </head>
 
   <body>
     <!-- ENCABEZADO / NAVBAR -->
-    <header class="header sticky-top">
-      <nav class="navbar navbar-expand-lg">
-        <div
-          class="container-fluid container-lg logo-container align-items-center"
-        >
-          <!-- Logo y Marca -->
-          <a
-            href="#"
-            class="brand-logo d-flex align-items-center gap-2 text-decoration-none"
-          >
-            <div class="logo-silhouette">
-              <img src="/img/silueta-bailarina.jpg" alt="Silueta Bailarina" />
-            </div>
-            <div class="d-flex flex-column">
-              <span class="logo-script">LisyDanceCuba</span>
-              <span class="logo-sub">ACADEMIA DE BALLET</span>
-            </div>
-          </a>
-
-          <!-- Botón Hamburguesa de Bootstrap -->
-          <button
-            class="navbar-toggler hamburger-menu ms-auto"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navBar"
-            aria-controls="navBar"
-            aria-expanded="false"
-            aria-label="Abrir menú de navegación"
-            id="hamburgerMenu"
-          >
-            <span class="navbar-toggler-icon bar"></span>
-          </button>
-
-          <!-- Menú Colapsable -->
-          <div class="collapse navbar-collapse justify-content-end" id="navBar">
-            <ul
-              class="navbar-nav nav-links me-lg-3 my-2 my-lg-0 align-items-lg-center"
-            >
-              <li class="nav-item">
-                <a class="nav-link" href="#inicio">INICIO</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#clases">CLASES</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#maestros">MAESTROS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#horarios">HORARIOS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contacto">CONTACTO</a>
-              </li>
-            </ul>
-
-            <a href="#inscripcion" class="btn btn-nav text-nowrap">
-              INSCRIBIRSE
-            </a>
-          </div>
+    <header class="header">
+      <div class="logo-container">
+        <div class="logo-silhouette">
+          <img src="/img/silueta-bailarina.jpg" alt="Silueta Bailarina" />
         </div>
+
+        <a href="#" class="brand-logo">
+          <span class="logo-script">LisyDanceCuba</span>
+          <span class="logo-sub">ACADEMIA DE BALLET</span>
+        </a>
+      </div>
+
+      <!-- Botón Hamburguesa alineado a la derecha -->
+      <button
+        class="hamburger-menu"
+        id="hamburgerMenu"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="navBar"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="navbar" id="navBar">
+        <ul class="nav-links">
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="#clases">CLASES</a></li>
+          <li><a href="#maestros">MAESTROS</a></li>
+          <li><a href="#horarios">HORARIOS</a></li>
+          <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+
+        <a href="#inscripcion" class="btn-nav"> INSCRIBIRSE </a>
       </nav>
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main>
       <!-- SECCIÓN HERO -->
-      <section
-        class="hero-section py-5 position-relative overflow-hidden"
-        id="inicio"
-      >
+      <section class="hero-section" id="inicio">
         <div class="hero-bg-block"></div>
 
-        <div class="container position-relative">
-          <div class="row align-items-center g-4">
-            <!-- Imagen Hero -->
-            <div class="col-lg-6 order-lg-2">
-              <div class="hero-image-container text-center">
+        <div class="hero-image-container">
+          <img
+            src="/img/bailarina-principal.jpg"
+            alt="Bailarina de Ballet en Salto"
+            class="hero-img"
+          />
+        </div>
+
+        <div class="hero-content">
+          <h1 class="hero-title">EMPIEZA EL AÑO NUEVO CON NOSOTROS</h1>
+
+          <div class="quick-links">
+            <span class="quick-links-title"> NUESTRAS CLASES </span>
+
+            <div class="quick-links-buttons">
+              <a href="#tecnica" class="badge-link">
                 <img
-                  src="/img/bailarina-principal.jpg"
-                  alt="Bailarina de Ballet en Salto"
-                  class="hero-img img-fluid rounded-4 shadow-lg"
+                  src="/img/icon-tecnica.png"
+                  alt="Icono Técnica Cubana"
+                  class="badge-icon"
                 />
-              </div>
+                <span>PRE BALLET</span>
+              </a>
+
+              <a href="#puntas" class="badge-link">
+                <img
+                  src="/img/icon-puntas.png"
+                  alt="Icono Puntas"
+                  class="badge-icon"
+                />
+                <span>PUNTAS</span>
+              </a>
+
+              <a href="#niveles" class="badge-link">
+                <img
+                  src="/img/icon-niveles.png"
+                  alt="Icono Niveles"
+                  class="badge-icon"
+                />
+                <span>REPERTORIO</span>
+              </a>
             </div>
+          </div>
 
-            <!-- Contenido Hero -->
-            <div class="col-lg-6 order-lg-1">
-              <div class="hero-content">
-                <h1 class="hero-title display-5 fw-bold mb-4">
-                  EMPIEZA EL AÑO NUEVO CON NOSOTROS
-                </h1>
+          <a href="#inscripcion" class="btn-cta-primary"> INSCRIBIRSE AHORA </a>
 
-                <div class="quick-links mb-4">
-                  <span class="quick-links-title d-block mb-2 fw-bold">
-                    NUESTRAS CLASES
-                  </span>
+          <div class="hero-announcement">
+            <h2>INSCRIPCIONES ABIERTAS</h2>
 
-                  <div class="quick-links-buttons d-flex flex-wrap gap-2">
-                    <a
-                      href="#tecnica"
-                      class="badge-link d-inline-flex align-items-center gap-2"
-                    >
-                      <img
-                        src="/img/icon-tecnica.png"
-                        alt="Icono Técnica Cubana"
-                        class="badge-icon"
-                      />
-                      <span>PRE BALLET</span>
-                    </a>
-
-                    <a
-                      href="#puntas"
-                      class="badge-link d-inline-flex align-items-center gap-2"
-                    >
-                      <img
-                        src="/img/icon-puntas.png"
-                        alt="Icono Puntas"
-                        class="badge-icon"
-                      />
-                      <span>PUNTAS</span>
-                    </a>
-
-                    <a
-                      href="#niveles"
-                      class="badge-link d-inline-flex align-items-center gap-2"
-                    >
-                      <img
-                        src="/img/icon-niveles.png"
-                        alt="Icono Niveles"
-                        class="badge-icon"
-                      />
-                      <span>REPERTORIO</span>
-                    </a>
-                  </div>
-                </div>
-
-                <a href="#inscripcion" class="btn btn-cta-primary mb-4">
-                  INSCRIBIRSE AHORA
-                </a>
-
-                <div class="hero-announcement p-3 rounded-3">
-                  <h2 class="h5 fw-bold mb-1">INSCRIPCIONES ABIERTAS</h2>
-                  <p class="mb-0">Año lectivo 2026 y Vacacional</p>
-                </div>
-              </div>
-            </div>
+            <p>Año electivo 2026 y Vacacional</p>
           </div>
         </div>
       </section>
 
       <!-- SECCIÓN TESTIMONIALES -->
-      <section class="testimonials-section py-5">
-        <div class="container">
-          <h2 class="section-title text-center mb-5">ULTIMOS TESTIMONIOS</h2>
+      <section class="testimonials-section">
+        <h2 class="section-title">ULTIMOS TESTIMONIOS</h2>
 
-          <div class="row g-4 testimonials-grid justify-content-center">
-            <div class="col-md-6 col-lg-4">
-              <article class="testimonial-card h-100 p-4 rounded-4 shadow-sm">
-                <img
-                  src="/img/user2.jpg"
-                  alt="Foto de María, madre de familia"
-                  class="avatar rounded-circle mb-3"
-                />
-                <p class="testimonial-text mb-0">
-                  “Estoy muy contenta con el avance de mi hija. Ha ganado
-                  confianza, disciplina y, sobre todo, disfruta muchísimo cada
-                  clase.”
-                </p>
-              </article>
-            </div>
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <img
+              src="/img/user2.jpg"
+              alt="Foto de María, madre de familia"
+              class="avatar"
+            />
 
-            <div class="col-md-6 col-lg-4">
-              <article
-                class="testimonial-card no-avatar h-100 p-4 rounded-4 shadow-sm"
-              >
-                <img
-                  src="/img/user3.jpg"
-                  alt="Foto de Andrea, madre de familia"
-                  class="avatar rounded-circle mb-3"
-                />
-                <p class="testimonial-text mb-0">
-                  “Desde el primer día nos encantó el ambiente de la academia.
-                  Las niñas aprenden, se divierten y desarrollan mucho amor por
-                  la danza.”
-                </p>
-              </article>
-            </div>
+            <p class="testimonial-text">
+              “Estoy muy contenta con el avance de mi hija. Ha ganado confianza,
+              disciplina y, sobre todo, disfruta muchísimo cada clase.”
+            </p>
+          </article>
 
-            <div class="col-md-6 col-lg-4">
-              <article class="testimonial-card h-100 p-4 rounded-4 shadow-sm">
-                <img
-                  src="/img/user1.avif"
-                  alt="Foto de Andrea, madre de familia"
-                  class="avatar rounded-circle mb-3"
-                />
-                <p class="testimonial-text mb-0">
-                  “Una excelente experiencia. Mi hija esperaba con mucha ilusión
-                  cada clase y hemos visto un gran cambio en su seguridad y
-                  desenvolvimiento.”
-                </p>
-              </article>
-            </div>
-          </div>
+          <article class="testimonial-card no-avatar">
+            <img
+              src="/img/user3.jpg"
+              alt="Foto de Andrea, madre de familia"
+              class="avatar"
+            />
 
-          <div class="carousel-dots d-flex justify-content-center gap-2 mt-4">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
+            <p class="testimonial-text">
+              “Desde el primer día nos encantó el ambiente de la academia. Las
+              niñas aprenden, se divierten y desarrollan mucho amor por la
+              danza.”
+            </p>
+          </article>
+
+          <article class="testimonial-card">
+            <img
+              src="/img/user1.avif"
+              alt="Foto de Andrea, madre de familia"
+              class="avatar"
+            />
+
+            <p class="testimonial-text">
+              “Una excelente experiencia. Mi hija esperaba con mucha ilusión
+              cada clase y hemos visto un gran cambio en su seguridad y
+              desenvolvimiento.”
+            </p>
+          </article>
+        </div>
+
+        <div class="carousel-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
         </div>
       </section>
 
       <!-- SECCIÓN NUESTRAS CLASES -->
-      <section class="classes-section py-5 position-relative" id="clases">
-        <div class="container classes-container">
-          <div class="row g-4 align-items-start">
-            <!-- Lista de Clases -->
-            <div class="col-lg-8 classes-content">
-              <h2 class="section-title left-aligned mb-4">
-                CURSOS REGULARES DESDE ENERO
-              </h2>
+      <section class="classes-section" id="clases">
+        <div class="classes-container">
+          <!-- Lista de Clases -->
+          <div class="classes-content">
+            <h2 class="section-title left-aligned">
+              CURSOS REGULARES DESDE ENERO
+            </h2>
 
-              <div class="row g-4 classes-grid">
-                <div class="col-sm-6">
-                  <article
-                    class="class-card card h-100 border-0 shadow-sm overflow-hidden"
-                  >
-                    <img
-                      src="/img/baby-ballet.webp"
-                      class="card-img-top img-fluid"
-                      alt="Clase de Baby Ballet"
-                    />
-                    <div class="class-info card-body p-3">
-                      <h3 class="h5 card-title fw-bold">BABY BALLET</h3>
-                      <p class="card-text text-muted mb-0">
-                        Niñas desde los 4 años.
-                      </p>
-                    </div>
-                  </article>
-                </div>
+            <div class="classes-grid">
+              <article class="class-card">
+                <img src="/img/baby-ballet.webp" alt="Clase de Baby Ballet" />
 
-                <div class="col-sm-6">
-                  <article
-                    class="class-card card h-100 border-0 shadow-sm overflow-hidden"
-                  >
-                    <img
-                      src="/img/ballet-niveles.jpg.png"
-                      class="card-img-top img-fluid"
-                      alt="Clase de Ballet Principiante, Intermedio y Avanzado"
-                    />
-                    <div class="class-info card-body p-3">
-                      <h3 class="h5 card-title fw-bold">BALLET NIVELES</h3>
-                      <p class="card-text text-muted mb-0">
-                        Principiante 1 y 2 · Intermedio - Avanzado.
-                      </p>
-                    </div>
-                  </article>
-                </div>
+                <div class="class-info">
+                  <h3>BABY BALLET</h3>
 
-                <div class="col-sm-6">
-                  <article
-                    class="class-card card h-100 border-0 shadow-sm overflow-hidden"
-                  >
-                    <img
-                      src="/img/puntas.png"
-                      class="card-img-top img-fluid"
-                      alt="Clase de Puntas de Ballet"
-                    />
-                    <div class="class-info card-body p-3">
-                      <h3 class="h5 card-title fw-bold">PUNTAS</h3>
-                      <p class="card-text text-muted mb-0">
-                        Técnica y preparación para el trabajo en puntas.
-                      </p>
-                    </div>
-                  </article>
+                  <p>Niñas desde los 4 años.</p>
                 </div>
+              </article>
 
-                <div class="col-sm-6">
-                  <article
-                    class="class-card card h-100 border-0 shadow-sm overflow-hidden"
-                  >
-                    <img
-                      src="/img/tecnica-cubana.png"
-                      class="card-img-top img-fluid"
-                      alt="Clases de Ballet y Preparación Física"
-                    />
-                    <div class="class-info card-body p-3">
-                      <h3 class="h5 card-title fw-bold">REPERTORIO</h3>
-                      <p class="card-text text-muted mb-0">
-                        Preparación Física · Clases Personalizadas.
-                      </p>
-                    </div>
-                  </article>
+              <article class="class-card">
+                <img
+                  src="/img/ballet-niveles.jpg.png"
+                  alt="Clase de Ballet Principiante, Intermedio y Avanzado"
+                />
+
+                <div class="class-info">
+                  <h3>BALLET NIVELES</h3>
+
+                  <p>Principiante 1 y 2 · Intermedio - Avanzado.</p>
                 </div>
-              </div>
+              </article>
+
+              <article class="class-card">
+                <img src="/img/puntas.png" alt="Clase de Puntas de Ballet" />
+
+                <div class="class-info">
+                  <h3>PUNTAS</h3>
+
+                  <p>Técnica y preparación para el trabajo en puntas.</p>
+                </div>
+              </article>
+
+              <article class="class-card">
+                <img
+                  src="/img/tecnica-cubana.png"
+                  alt="Clases de Ballet y Preparación Física"
+                />
+
+                <div class="class-info">
+                  <h3>REPERTORIO</h3>
+
+                  <p>Preparación Física · Clases Personalizadas.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Tarjeta Destacada -->
+          <aside class="featured-card">
+            <div class="featured-icon-wrapper">
+              <svg
+                class="calendar-icon"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm-12-8h5v5H7v-5z"
+                />
+              </svg>
             </div>
 
-            <!-- Tarjeta Destacada -->
-            <div class="col-lg-4">
-              <aside
-                class="featured-card card h-100 p-4 text-center border-0 shadow-sm"
-              >
-                <div class="featured-icon-wrapper mb-3">
+            <h3>VACACIONALES DESDE FEBRERO</h3>
+
+            <p class="featured-subtitle">
+              COMPETENCIAS NACIONALES / PREPARACIÓN FÍSICA
+            </p>
+
+            <span class="badge-limited"> Niñas desde los 4 años </span>
+          </aside>
+        </div>
+
+        <!-- Imagen decorativa -->
+        <div class="decorative-ribbon-shoes">
+          <img
+            width="150px"
+            src="/img/zapatillas-lazo.png"
+            alt="Zapatillas de ballet con lazo satinado"
+          />
+        </div>
+      </section>
+
+      <!-- SECCIÓN UBICACIÓN -->
+      <section class="location-section" id="ubicacion">
+        <div class="location-container">
+          <div class="location-info">
+            <h2 class="section-title left-aligned light-title">
+              NUESTRA UBICACIÓN
+            </h2>
+            <p class="location-description">
+              Nos encontramos en una zona accesible y céntrica de Guayaquil.
+              Visítanos en nuestras instalaciones diseñadas especialmente para
+              la práctica del ballet.
+            </p>
+
+            <div class="location-details">
+              <div class="location-item">
+                <div class="location-icon">
                   <svg
-                    class="calendar-icon"
-                    width="48"
-                    height="48"
+                    width="22"
+                    height="22"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
                   >
                     <path
-                      d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm-12-8h5v5H7v-5z"
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
                     />
                   </svg>
                 </div>
-
-                <h3 class="h4 fw-bold">VACACIONALES DESDE FEBRERO</h3>
-
-                <p class="featured-subtitle my-3">
-                  COMPETENCIAS NACIONALES / PREPARACIÓN FÍSICA
-                </p>
-
-                <span class="badge badge-limited rounded-pill px-3 py-2">
-                  Niñas desde los 4 años
-                </span>
-              </aside>
-            </div>
-          </div>
-
-          <!-- Imagen decorativa -->
-          <div class="decorative-ribbon-shoes text-end mt-4">
-            <img
-              width="150"
-              src="/img/zapatillas-lazo.png"
-              alt="Zapatillas de ballet con lazo satinado"
-              class="img-fluid"
-            />
-          </div>
-        </div>
-      </section>
-
-      <!-- SECCIÓN UBICACIÓN -->
-      <section class="location-section py-5" id="ubicacion">
-        <div class="container location-container">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-6 location-info">
-              <h2 class="section-title left-aligned light-title mb-3">
-                NUESTRA UBICACIÓN
-              </h2>
-              <p class="location-description mb-4">
-                Nos encontramos en una zona accesible y céntrica de Guayaquil.
-                Visítanos en nuestras instalaciones diseñadas especialmente para
-                la práctica del ballet.
-              </p>
-
-              <div class="location-details d-flex flex-column gap-3 mb-4">
-                <div class="location-item d-flex gap-3 align-items-start">
-                  <div class="location-icon">
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <span class="location-label d-block fw-bold"
-                      >DIRECCIÓN</span
-                    >
-                    <p class="location-text mb-0">
-                      Espacio de Danza Pamela Pazmiño<br />
-                      Av. Juan Tanca Marengo & Av. Rodrigo Chávez González,
-                      Guayaquil
-                    </p>
-                  </div>
-                </div>
-
-                <div class="location-item d-flex gap-3 align-items-start">
-                  <div class="location-icon">
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.71L11 12.41V7h2v4.59l3.71 3.71-1.42 1.41z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <span class="location-label d-block fw-bold"
-                      >ATENCIÓN PRESENCIAL</span
-                    >
-                    <p class="location-text mb-0">
-                      Lunes a Viernes: 15:00 - 19:30 | Sábados: 08:30 - 13:00
-                    </p>
-                  </div>
+                <div>
+                  <span class="location-label">DIRECCIÓN</span>
+                  <p class="location-text">
+                    Espacio de Danza Pamela Pazmiño<br />
+                    Av. Juan Tanca Marengo & Av. Rodrigo Chávez González,
+                    Guayaquil
+                  </p>
                 </div>
               </div>
 
-              <a
-                href="https://maps.app.goo.gl/PvaHTWougWeQFwwf7"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-location d-inline-flex align-items-center gap-2"
+              <div class="location-item">
+                <div class="location-icon">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.71L11 12.41V7h2v4.59l3.71 3.71-1.42 1.41z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <span class="location-label">ATENCIÓN PRESENCIAL</span>
+                  <p class="location-text">
+                    Lunes a Viernes: 15:00 - 19:30 | Sábados: 08:30 - 13:00
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="https://maps.app.goo.gl/PvaHTWougWeQFwwf7"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-location"
+            >
+              <span>ABRIR EN GOOGLE MAPS</span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
               >
-                <span>ABRIR EN GOOGLE MAPS</span>
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-                  />
-                </svg>
-              </a>
-            </div>
+                <path
+                  d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+                />
+              </svg>
+            </a>
+          </div>
 
-            <!-- Mapa Interactivo -->
-            <div class="col-lg-6 location-map-wrapper">
-              <div class="ratio ratio-4x3 rounded-4 overflow-hidden shadow-sm">
-                <iframe
-                  title="Ubicación en Escobedo 704, Guayaquil"
-                  src="https://maps.google.com/maps?q=-2.1879419,-79.8826309&hl=es&z=17&output=embed"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  id="iframeGoogleMap"
-                ></iframe>
-              </div>
-            </div>
+          <!-- Mapa Interactivo Embed -->
+          <div class="location-map-wrapper">
+            <iframe
+              width="100%"
+              height="100%"
+              title="Ubicación en Escobedo 704, Guayaquil"
+              src="https://maps.google.com/maps?q=-2.1879419,-79.8826309&hl=es&z=17&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              id="iframeGoogleMap"
+            ></iframe>
           </div>
         </div>
       </section>
-
       <!-- SECCIÓN CONTACTO -->
-      <section class="contact-section py-5" id="contacto">
-        <div class="container contact-container">
-          <div class="row g-4 align-items-center">
-            <!-- Información de Contacto -->
-            <div class="col-lg-5 contact-info-block">
-              <h2 class="section-title left-aligned mb-3">
-                PÓNTASE EN CONTACTO
-              </h2>
-              <p class="contact-description mb-4">
-                ¿Tienes dudas sobre los horarios, niveles o el proceso de
-                inscripción? Escríbenos y con gusto te brindaremos toda la
-                información que necesitas.
-              </p>
+      <section class="contact-section" id="contacto">
+        <div class="contact-container">
+          <!-- Información de Contacto -->
+          <div class="contact-info-block">
+            <h2 class="section-title left-aligned">PÓNTASE EN CONTACTO</h2>
+            <p class="contact-description">
+              ¿Tienes dudas sobre los horarios, niveles o el proceso de
+              inscripción? Escríbenos y con gusto te brindaremos toda la
+              información que necesitas.
+            </p>
 
-              <div class="contact-details d-flex flex-column gap-3 mb-4">
-                <div class="contact-item d-flex gap-3 align-items-center">
-                  <div class="contact-icon">
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <span class="contact-label d-block fw-bold"
-                      >TELÉFONO / WHATSAPP</span
-                    >
-                    <p class="contact-text mb-0">0968433572</p>
-                  </div>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                    />
+                  </svg>
                 </div>
-
-                <div class="contact-item d-flex gap-3 align-items-center">
-                  <div class="contact-icon">
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <span class="contact-label d-block fw-bold"
-                      >EDAD DE INGRESO</span
-                    >
-                    <p class="contact-text mb-0">Niñas desde los 4 años</p>
-                  </div>
+                <div>
+                  <span class="contact-label">TELÉFONO / WHATSAPP</span>
+                  <p class="contact-text">0968433572</p>
                 </div>
               </div>
 
-              <!-- Redes Sociales -->
-              <div class="contact-social">
-                <span class="contact-label d-block mb-2 fw-bold"
-                  >SÍGUENOS EN REDES</span
-                >
-                <div class="social-links d-flex gap-2">
-                  <a
-                    href="#"
-                    aria-label="Facebook"
-                    class="social-btn btn border-0 p-2"
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
                   >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.69c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 3h-2.33v6.8c4.56-.93 8-4.96 8-9.8z"
-                      />
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    aria-label="Instagram"
-                    class="social-btn btn border-0 p-2"
-                  >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                      />
-                    </svg>
-                  </a>
-                  <a
-                    href="#"
-                    aria-label="YouTube"
-                    class="social-btn btn border-0 p-2"
-                  >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                      />
-                    </svg>
-                  </a>
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-label">EDAD DE INGRESO</span>
+                  <p class="contact-text">Niñas desde los 4 años</p>
                 </div>
               </div>
             </div>
 
-            <!-- Formulario de Contacto -->
-            <div class="col-lg-7">
-              <form
-                class="contact-form p-4 rounded-4 shadow-sm"
-                id="contactForm"
-                action="#"
-                method="POST"
-              >
-                <div class="mb-3 form-group">
-                  <label for="fullName" class="form-label"
-                    >Nombre Completo</label
+            <!-- Redes sociales sin LinkedIn -->
+            <div class="contact-social">
+              <span class="contact-label">SÍGUENOS EN REDES</span>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook" class="social-btn">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
                   >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="fullName"
-                    name="fullName"
-                    placeholder="Ej. María García"
-                    required
-                  />
-                </div>
-
-                <div class="row g-3 mb-3 form-row">
-                  <div class="col-md-6 form-group">
-                    <label for="userEmail" class="form-label"
-                      >Correo Electrónico</label
-                    >
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="userEmail"
-                      name="userEmail"
-                      placeholder="ejemplo@correo.com"
-                      required
+                    <path
+                      d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.69c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 3h-2.33v6.8c4.56-.93 8-4.96 8-9.8z"
                     />
-                  </div>
-
-                  <div class="col-md-6 form-group">
-                    <label for="userPhone" class="form-label"
-                      >Teléfono / WhatsApp</label
-                    >
-                    <input
-                      type="tel"
-                      class="form-control"
-                      id="userPhone"
-                      name="userPhone"
-                      placeholder="0991234567"
-                      required
+                  </svg>
+                </a>
+                <a href="#" aria-label="Instagram" class="social-btn">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
                     />
-                  </div>
-                </div>
-
-                <div class="mb-3 form-group">
-                  <label for="classInterest" class="form-label"
-                    >Curso de Interés</label
+                  </svg>
+                </a>
+                <a href="#" aria-label="YouTube" class="social-btn">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
                   >
-                  <select
-                    class="form-select"
-                    id="classInterest"
-                    name="classInterest"
-                  >
-                    <option value="baby-ballet">Baby Ballet (4+ años)</option>
-                    <option value="principiante">Ballet Principiante</option>
-                    <option value="intermedio-avanzado">
-                      Intermedio / Avanzado
-                    </option>
-                    <option value="puntas">Puntas y Repertorio</option>
-                    <option value="vacacional">Curso Vacacional</option>
-                  </select>
-                </div>
-
-                <div class="mb-3 form-group">
-                  <label for="userMessage" class="form-label">Mensaje</label>
-                  <textarea
-                    class="form-control"
-                    id="userMessage"
-                    name="userMessage"
-                    rows="4"
-                    placeholder="Escribe tu consulta aquí..."
-                    required
-                  ></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-submit w-100">
-                  ENVIAR MENSAJE
-                </button>
-              </form>
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
+
+          <!-- Formulario de Contacto -->
+          <form class="contact-form" id="contactForm" action="#" method="POST">
+            <div class="form-group">
+              <label for="fullName">Nombre Completo</label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Ej. María García"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="userEmail">Correo Electrónico</label>
+                <input
+                  type="email"
+                  id="userEmail"
+                  name="userEmail"
+                  placeholder="ejemplo@correo.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="userPhone">Teléfono / WhatsApp</label>
+                <input
+                  type="tel"
+                  id="userPhone"
+                  name="userPhone"
+                  placeholder="0991234567"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="classInterest">Curso de Interés</label>
+              <select id="classInterest" name="classInterest">
+                <option value="baby-ballet">Baby Ballet (4+ años)</option>
+                <option value="principiante">Ballet Principiante</option>
+                <option value="intermedio-avanzado">
+                  Intermedio / Avanzado
+                </option>
+                <option value="puntas">Puntas y Repertorio</option>
+                <option value="vacacional">Curso Vacacional</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="userMessage">Mensaje</label>
+              <textarea
+                id="userMessage"
+                name="userMessage"
+                rows="4"
+                placeholder="Escribe tu consulta aquí..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">ENVIAR MENSAJE</button>
+          </form>
         </div>
       </section>
     </main>
 
     <!-- PIE DE PÁGINA -->
-    <footer class="footer py-4">
-      <div class="container footer-container">
-        <div class="row g-4 align-items-center">
-          <!-- INFORMES -->
-          <div class="col-md-4 footer-item d-flex align-items-center gap-3">
-            <div
-              class="footer-icon-circle flex-shrink-0 d-flex align-items-center justify-content-center"
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- DIRECCIÓN -->
+        <div class="footer-item">
+          <div class="footer-icon-circle">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
             >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="footer-info">
+            <span class="footer-label"> INFORMES E INSCRIPCIONES: </span>
+
+            <p class="footer-text">0968433572</p>
+          </div>
+        </div>
+
+        <!-- INFORMACIÓN -->
+        <div class="footer-item">
+          <div class="footer-icon-circle">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+              />
+            </svg>
+          </div>
+
+          <div class="footer-info">
+            <span class="footer-label"> EDAD DE INICIO: </span>
+
+            <p class="footer-text">Niñas desde los 4 años</p>
+          </div>
+        </div>
+
+        <!-- REDES SOCIALES -->
+        <div class="footer-item social-block">
+          <span class="footer-label"> LisyDanceCuba </span>
+
+          <div class="social-links">
+            <!-- Facebook -->
+            <a href="#" aria-label="Facebook" class="social-btn">
               <svg
                 width="20"
                 height="20"
@@ -695,23 +589,13 @@
                 aria-hidden="true"
               >
                 <path
-                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.69c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 3h-2.33v6.8c4.56-.93 8-4.96 8-9.8z"
                 />
               </svg>
-            </div>
-            <div class="footer-info">
-              <span class="footer-label d-block fw-bold">
-                INFORMES E INSCRIPCIONES:
-              </span>
-              <p class="footer-text mb-0">0968433572</p>
-            </div>
-          </div>
+            </a>
 
-          <!-- EDAD -->
-          <div class="col-md-4 footer-item d-flex align-items-center gap-3">
-            <div
-              class="footer-icon-circle flex-shrink-0 d-flex align-items-center justify-content-center"
-            >
+            <!-- Instagram -->
+            <a href="#" aria-label="Instagram" class="social-btn">
               <svg
                 width="20"
                 height="20"
@@ -720,83 +604,29 @@
                 aria-hidden="true"
               >
                 <path
-                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
                 />
               </svg>
-            </div>
-            <div class="footer-info">
-              <span class="footer-label d-block fw-bold">
-                EDAD DE INICIO:
-              </span>
-              <p class="footer-text mb-0">Niñas desde los 4 años</p>
-            </div>
-          </div>
+            </a>
 
-          <!-- REDES SOCIALES -->
-          <div class="col-md-4 footer-item social-block text-md-end">
-            <span class="footer-label d-block fw-bold mb-2">
-              LisyDanceCuba
-            </span>
-            <div class="social-links d-inline-flex gap-2">
-              <a
-                href="#"
-                aria-label="Facebook"
-                class="social-btn btn border-0 p-2"
+            <!-- YouTube -->
+            <a href="#" aria-label="YouTube" class="social-btn">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
               >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.69c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 3h-2.33v6.8c4.56-.93 8-4.96 8-9.8z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="#"
-                aria-label="Instagram"
-                class="social-btn btn border-0 p-2"
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="#"
-                aria-label="YouTube"
-                class="social-btn btn border-0 p-2"
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                  />
-                </svg>
-              </a>
-            </div>
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
     </footer>
-
-    <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/bootstrap.bundle.min.js"></script>
-    <script src="src/main.ts" type="module"></script>
   </body>
+  <script src="src/main.ts"></script>
 </html>
