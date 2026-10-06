@@ -1,60 +1,91 @@
-import './style.css'
-import heroImg from './assets/hero.png'
-import typescriptLogo from './assets/typescript.svg'
-import viteLogo from './assets/vite.svg'
-import { setupCounter } from './counter.ts'
+document.addEventListener('DOMContentLoaded', (): void => {
+  const header = document.querySelector('.header') as HTMLElement | null;
+  const hamburgerMenu = document.getElementById('hamburgerMenu') as HTMLButtonElement | null;
+  const navBar = document.getElementById('navBar') as HTMLElement | null;
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-<section id="center">
-  <div class="hero">
-    <img src="${heroImg}" class="base" width="170" height="179">
-    <img src="${typescriptLogo}" class="framework" alt="TypeScript logo"/>
-    <img src="${viteLogo}" class="vite" alt="Vite logo" />
-  </div>
-  <div>
-    <h1>Get started</h1>
-    <p>Edit <code>src/main.ts</code> and save to test <code>HMR</code></p>
-  </div>
-  <button id="counter" type="button" class="counter"></button>
-</section>
+  if (!header || !hamburgerMenu || !navBar) return;
 
-<div class="ticks"></div>
+  const navLinks = navBar.querySelectorAll<HTMLAnchorElement>('.nav-links a, .btn-nav');
 
-<section id="next-steps">
-  <div id="docs">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#documentation-icon"></use></svg>
-    <h2>Documentation</h2>
-    <p>Your questions, answered</p>
-    <ul>
-      <li>
-        <a href="https://vite.dev/" target="_blank">
-          <img class="logo" src="${viteLogo}" alt="" />
-          Explore Vite
-        </a>
-      </li>
-      <li>
-        <a href="https://www.typescriptlang.org" target="_blank">
-          <img class="button-icon" src="${typescriptLogo}" alt="">
-          Learn more
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div id="social">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#social-icon"></use></svg>
-    <h2>Connect with us</h2>
-    <p>Join the Vite community</p>
-    <ul>
-      <li><a href="https://github.com/vitejs/vite" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
-      <li><a href="https://chat.vite.dev/" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Discord</a></li>
-      <li><a href="https://x.com/vite_js" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#x-icon"></use></svg>X.com</a></li>
-      <li><a href="https://bsky.app/profile/vite.dev" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
-    </ul>
-  </div>
-</section>
+  // --- LÓGICA DEL MENÚ DESPLEGABLE ---
+  const openMenu = (): void => {
+    hamburgerMenu.classList.add('active');
+    navBar.classList.add('active');
+    hamburgerMenu.setAttribute('aria-expanded', 'true');
+  };
 
-<div class="ticks"></div>
-<section id="spacer"></section>
-`
+  const closeMenu = (): void => {
+    hamburgerMenu.classList.remove('active');
+    navBar.classList.remove('active');
+    hamburgerMenu.setAttribute('aria-expanded', 'false');
+  };
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+  const toggleMenu = (): void => {
+    const isExpanded = hamburgerMenu.getAttribute('aria-expanded') === 'true';
+    isExpanded ? closeMenu() : openMenu();
+  };
+
+  hamburgerMenu.addEventListener('click', (event: MouseEvent): void => {
+    event.stopPropagation();
+    toggleMenu();
+  });
+
+  navLinks.forEach((link: HTMLAnchorElement): void => {
+    link.addEventListener('click', (): void => {
+      closeMenu();
+    });
+  });
+
+  document.addEventListener('click', (event: MouseEvent): void => {
+    const target = event.target as Node;
+    if (!header.contains(target) && navBar.classList.contains('active')) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener('keydown', (event: KeyboardEvent): void => {
+    if (event.key === 'Escape' && navBar.classList.contains('active')) {
+      closeMenu();
+    }
+  });
+
+  // --- LÓGICA DE SCROLL FLUIDO (rAF) ---
+  let lastScrollY: number = window.scrollY;
+  let ticking: boolean = false;
+  const threshold: number = 15; // Umbral para ignorar micro-movimientos
+
+  const updateHeaderPosition = (): void => {
+    const currentScrollY: number = window.scrollY;
+
+    // Si el menú móvil está abierto o estamos arriba del todo, siempre visible
+    if (navBar.classList.contains('active') || currentScrollY <= 60) {
+      header.classList.remove('header--hidden');
+      lastScrollY = currentScrollY;
+      ticking = false;
+      return;
+    }
+
+    // Filtrar pequeñas variaciones
+    if (Math.abs(currentScrollY - lastScrollY) >= threshold) {
+      if (currentScrollY > lastScrollY) {
+        // Hacia abajo -> Ocultar
+        header.classList.add('header--hidden');
+      } else {
+        // Hacia arriba -> Mostrar
+        header.classList.remove('header--hidden');
+      }
+      lastScrollY = currentScrollY;
+    }
+
+    ticking = false;
+  };
+
+  const onScroll = (): void => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateHeaderPosition);
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+});
